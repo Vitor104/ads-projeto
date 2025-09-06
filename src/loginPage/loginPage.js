@@ -1,6 +1,7 @@
 import React from "react";
 import Styles from "./loginPage.module.css";
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
@@ -19,7 +20,10 @@ function LoginPage() {
                     <input className={Styles.inputField} type="password" id="password" name="password" required />
                 </div>
                 <Button className={Styles.button} type="submit" variant="info">Sign In</Button>
-                <Button type="submit" variant="info">Sign Up</Button>
+                <Link className={Styles.linkBtt} to={'./Sign Up'}>
+                    <Button className={Styles.bttSignUp} type="submit" variant="info">Sign Up</Button>
+                </Link>
+                
             </form>
         </div>   
 
@@ -27,7 +31,9 @@ function LoginPage() {
         <div className={Styles.signUpDesktop}>
             <h2>Olá, visitante!</h2>
             <p>Ainda não possui uma conta?</p>
-            <Button type="submit" variant="secondary">Sign Up</Button>
+            <Link to={'./Sign Up'}>
+                <Button className={Styles.bttSignUp} type="submit" variant="secondary">Sign Up</Button>
+            </Link>
         </div>
         
     </div>
