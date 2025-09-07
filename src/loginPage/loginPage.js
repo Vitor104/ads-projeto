@@ -1,23 +1,41 @@
-import React from "react";
+    import React, {useState} from "react";
 import Styles from "./loginPage.module.css";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
 function LoginPage() {
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Aqui você pode adicionar a lógica para autenticar o usuário
+        const usersData = localStorage.getItem('users');
+        const users = usersData ? JSON.parse(usersData) : [];
+        const foundUser = users.find(user => user.email === email);
+
+        if (foundUser && foundUser.password === password) {
+            alert('Login realizado com sucesso!');
+        } else {
+            alert('Usuário ou senha incorretos!');
+        }
+    }
+
   return (
     <div className={Styles.container}>
         
 
         <div className={Styles.formContainer}>
             <h1>Bem vindo(a)!</h1>
-            <form className={Styles.form}>
+            <form className={Styles.form} onSubmit={handleSubmit}>
                 <div className={Styles.inputGroup}> 
-                    <label htmlFor="username">Usuário:</label>
-                    <input className={Styles.inputField} type="text" id="username" name="username" required />
+                    <label htmlFor="email">Email</label>
+                    <input onChange={(e) => setEmail(e.target.value)} className={Styles.inputField} type="email" id="email" name="email" required />
                 </div>
                 <div className={Styles.inputGroup}>
                     <label htmlFor="password">Senha:</label>
-                    <input className={Styles.inputField} type="password" id="password" name="password" required />
+                    <input className={Styles.inputField} type="password" id="password" name="password" required onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <Button className={Styles.button} type="submit" variant="info">Sign In</Button>
                 <Link className={Styles.linkBtt} to={'./Sign Up'}>
@@ -38,6 +56,7 @@ function LoginPage() {
         
     </div>
     )
+
 };
 
 
