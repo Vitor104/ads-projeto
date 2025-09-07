@@ -1,25 +1,28 @@
-    import React, {useState} from "react";
+    import React, {use, useState} from "react";
 import Styles from "./loginPage.module.css";
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function LoginPage() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Aqui você pode adicionar a lógica para autenticar o usuário
+        
         const usersData = localStorage.getItem('users');
         const users = usersData ? JSON.parse(usersData) : [];
         const foundUser = users.find(user => user.email === email);
 
         if (foundUser && foundUser.password === password) {
-            alert('Login realizado com sucesso!');
+            navigate('/Products');
         } else {
             alert('Usuário ou senha incorretos!');
         }
+
+        
     }
 
   return (
