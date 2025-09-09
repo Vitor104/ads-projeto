@@ -17,22 +17,20 @@ function Products() {
     <div className={Styles.container}>
         <h1 className={Styles.title}>Produtos Disponíveis</h1>
         
-        <table className={Styles.productsTable}>
+        <table  border="1" style={{ width: '100%', textAlign: 'left' }}>
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Imagem</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Preço (R$)</th>
-                    <th>Ações</th>
+
                 </tr>
             </thead>
             <tbody> 
                 {products.map(product => (
                     <tr key={product.id}>
                         <td>{product.id}</td>
-                        <td><img className={Styles.productImage} src={product.image} alt={product.name} /></td> 
                         <td>{product.name}</td>
                         <td>{product.description}</td>
                         <td>{product.price.toFixed(2)}</td> 
