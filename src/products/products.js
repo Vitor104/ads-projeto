@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Styles from "./products.module.css";
 import { productsList } from "./productsList";
-//import computer from "./imagens/computer.jpg";
+import Button from 'react-bootstrap/Button';
 
 
 function Products() {
@@ -16,8 +16,7 @@ function Products() {
   return (
     <div className={Styles.container}>
         <h1 className={Styles.title}>Produtos Disponíveis</h1>
-        
-        <table  border="1" style={{ width: '100%', textAlign: 'left' }}>
+        <table className={Styles.productTable}>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -34,7 +33,7 @@ function Products() {
                         <td>{product.name}</td>
                         <td>{product.description}</td>
                         <td>{product.price.toFixed(2)}</td> 
-                        <td><button className={Styles.removeButton} onClick={() => handleRemover(product.id)}>Remover</button></td>
+                        <td><Button className={Styles.removeBtt} onClick={() => handleRemover(product.id)} variant="info">Remover</Button></td>
                     </tr>
                 ))}
             </tbody>

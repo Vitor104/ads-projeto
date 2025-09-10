@@ -15,7 +15,6 @@ function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); 
-        // Aqui você pode adicionar a lógica para enviar os dados para o servidor
         const userData = localStorage.getItem('users');
         const users = userData ? JSON.parse(userData) : [];
         const userExiste = users.find(user => user.email === email);
