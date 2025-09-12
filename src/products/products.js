@@ -16,14 +16,14 @@ function Products() {
   return (
     <div className={Styles.container}>
         <h1 className={Styles.title}>Produtos Disponíveis</h1>
-        <table className={Styles.productTable}>
+        <table className={Styles.productTable} class="table table-striped table-bordered table-dark rounded shadow-sm">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Preço (R$)</th>
-
+                    <th></th>
                 </tr>
             </thead>
             <tbody> 

@@ -8,7 +8,7 @@
 
 .container {
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-color: #f8f9fa;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -23,21 +23,35 @@
     justify-content: center;
     border-radius: 10px;
     text-align: center;
-    background-color: rgb(161, 169, 169);
+   /* background-color: rgb(161, 169, 169);*/
     height: 90vh;
     width: 90%;
 }
 
+.icons {
+    padding: 1em;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.iconEmailAndPassword {
+    padding-right: 10px;
+}
+
 .inputGroup {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-bottom: 15px;
     align-items: center;
+    justify-content: space-around;
 }
 
 .form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -49,6 +63,11 @@
     border-radius: 5px;
     width: 250px;
     font-size: 16px;
+    border: 2px solid black;
+}
+
+.button, .bttSignUp {
+    background-color: #0d6efd;
 }
 
 .button {
@@ -59,6 +78,16 @@
     display: none;
 }
 
+
+@media only screen and (min-width: 600px) {
+    .icons {
+        width: 60%;
+    }
+
+    .inputField {
+        width: 300px;
+    }
+}
 
 @media only screen and (min-width: 1024px) {
     .container {
@@ -76,7 +105,7 @@
         height: 85vh;
         width: 40%;
         border-radius: 10px 0 0 10px;
-        
+        border: 1px solid black;
     }
 
     .signUpDesktop {

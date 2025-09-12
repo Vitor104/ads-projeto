@@ -38,7 +38,7 @@ function SignUp() {
         <h1>Crie sua conta</h1>
     <div>
         
-        <Form className="bg-light p-4 rounded" onSubmit={handleSubmit}>
+        <Form className="bg-light p-4 rounded card" onSubmit={handleSubmit}>
 
     <Form.Group className="mb-3" controlId="formGroupEmail">
         <Form.Label>Email address</Form.Label>
