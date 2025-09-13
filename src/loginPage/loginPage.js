@@ -1,4 +1,4 @@
-    import React, {use, useState} from "react";
+    import React, {useState} from "react";
 import Styles from "./loginPage.module.css";
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from "react-router-dom";
@@ -75,13 +75,13 @@ function LoginPage() {
 
 
         <div className={Styles.signUpDesktop}>
-            <h2>Olá, visitante!</h2>
-            <p>Ainda não possui uma conta?</p>
-            <Link to={'./Sign Up'}>
-                <Button className={Styles.bttSignUp} type="submit" variant="secondary">Sign Up</Button>
-            </Link>
+            
+                <h2>Olá, visitante!</h2>
+                <p>Ainda não possui uma conta?</p>
+                <Link to={'./Sign Up'}>
+                    <Button className={Styles.bttSignUp} type="submit" variant="secondary">Sign Up</Button>
+                </Link>
         </div>
-        
     </div>
     )
 
