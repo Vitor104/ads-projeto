@@ -16,7 +16,7 @@ function Products() {
   return (
     <div className={Styles.container}>
         <h1 className={Styles.title}>Produtos Disponíveis</h1>
-        <table className={Styles.productTable} class="table table-striped table-bordered table-dark rounded shadow-sm">
+        <table className={`table table-striped table-bordered table-dark rounded shadow-sm ${Styles.productTable}`}>
             <thead>
                 <tr>
                     <th>ID</th>

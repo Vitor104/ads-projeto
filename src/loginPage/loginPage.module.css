@@ -78,6 +78,12 @@
     display: none;
 }
 
+.text {
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
 
 @media only screen and (min-width: 600px) {
     .icons {
