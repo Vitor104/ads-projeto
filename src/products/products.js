@@ -29,11 +29,11 @@ function Products() {
             <tbody> 
                 {products.map(product => (
                     <tr key={product.id}>
-                        <td>{product.id}</td>
-                        <td>{product.name}</td>
-                        <td>{product.description}</td>
-                        <td>{product.price.toFixed(2)}</td> 
-                        <td><Button className={Styles.removeBtt} onClick={() => handleRemover(product.id)} variant="info">Remover</Button></td>
+                        <td className={Styles.text}>{product.id}</td>
+                        <td className={Styles.text}>{product.name}</td>
+                        <td className={Styles.text}>{product.description}</td>
+                        <td className={Styles.text}>{product.price}</td> 
+                        <td className={Styles.text}><Button className={Styles.removeBtt} onClick={() => handleRemover(product.id)} variant="info">Remover</Button></td>
                     </tr>
                 ))}
             </tbody>

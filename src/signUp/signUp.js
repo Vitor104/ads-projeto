@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import Styles from "./signUp.module.css";
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
-
 import Form from 'react-bootstrap/Form';
 
 
@@ -35,31 +34,46 @@ function SignUp() {
   return (
 
     <div className={Styles.container}>
-        <h1>Crie sua conta</h1>
+        {/* COMEÇO DA PÁGINA */}
+
+        {/* CONTAINER CONTENDO TODO O CONTEÚDO DA PÁGINA */}
+        <h1 className={Styles.title}>Crie sua conta</h1>
+
+
     <div>
+        {/* INÍCIO DO FORMULÁRIO DE CADASTRO */}
         
         <Form className="bg-light p-4 rounded card" onSubmit={handleSubmit}>
+        {/* INÍCIO DO FORMULÁRIO DE CADASTRO - EMAIL */}
 
     <Form.Group className="mb-3" controlId="formGroupEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control required type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+        <Form.Label className={Styles.label}>Email address</Form.Label>
+        <Form.Control className={Styles.label} required type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
     </Form.Group>
+
+
+    {/* INÍCIO DO FORMULÁRIO DE CADASTRO - PASSWORD */}
 
     <Form.Group className="mb-3" controlId="formGroupPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control required type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+        <Form.Label className={Styles.label}>Password</Form.Label>
+        <Form.Control className={Styles.label} required type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
     </Form.Group>
+
+    {/* INÍCIO DO FORMULÁRIO DE CADASTRO - NAME */}
 
     <Form.Group className="mb-3" controlId="formGroupName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control required type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
+        <Form.Label className={Styles.label}>Name</Form.Label>
+        <Form.Control className={Styles.label} required type="text" placeholder="Name" onChange={(e) => setName(e.target.value)} />
     </Form.Group>
+
+    {/* INÍCIO DO FORMULÁRIO DE CADASTRO - CPF */}
 
     <Form.Group className="mb-3" controlId="formGroupCPF">
-        <Form.Label>CPF (apenas números)</Form.Label>
-        <Form.Control required type="number" placeholder="CPF" onChange={(e) => setCpf(e.target.value)} />
+        <Form.Label className={Styles.label}>CPF (apenas números)</Form.Label>
+        <Form.Control className={Styles.label} required type="number" placeholder="CPF" onChange={(e) => setCpf(e.target.value)} />
     </Form.Group>
 
+        {/* ENVIAR DADOS PARA VALIDAÇÃO */}
    
         <Button className={Styles.bttSignUp} type="submit" variant="primary">Sign Up</Button>
     

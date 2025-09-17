@@ -7,6 +7,16 @@
 .title {
     margin: 2em;
     color: white;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    text-align: left;
 }
 
 .container {
@@ -16,6 +26,8 @@
     text-align: center;
     background-color: #3aa7b1;
     padding-top: 20px;
+    animation-name: tableEffect;
+    animation-duration: 2s;
 }
 
 .productTable {
@@ -31,6 +43,11 @@
   border: 1px solid #333;
   text-align: left;
 }
+
+@keyframes tableEffect {
+    from {transform: translate(-150px); color: #001F54}
+  }
+
 
 @media only screen and (min-width: 1024px) {
     .container {
@@ -57,6 +74,8 @@
     .container {
         padding: 80px;
         font-size: 30px;
+        width: 50%;
+        margin: 0 auto;
     }
 
     .removeBtt {
@@ -65,5 +84,9 @@
 
     .productTable {
         width: 60%;
+    }
+
+    .text {
+        font-size: 25px;
     }
 }
