@@ -53,7 +53,7 @@ function LoginPage() {
             </div>
 
 
-            <p className={Styles.description}>ou use sua conta do Google:</p>
+            <p className={Styles.description}>ou use seu email:</p>
 
 
             <form onSubmit={handleSubmit} className={`card p-4 border border-dark rounded shadow-sm ${Styles.form}`}>
