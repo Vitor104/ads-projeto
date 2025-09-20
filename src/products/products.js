@@ -3,9 +3,6 @@ import Styles from "./products.module.css";
 import { productsList } from "./productsList";
 import Button from 'react-bootstrap/Button';
 import { useLocation } from "react-router-dom";
-
-
-import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
 
 
