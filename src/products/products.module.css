@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    color: white;
+}
+
+.navText {
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
 .title {
     margin: 2em;
     color: white;
@@ -25,7 +38,14 @@
     overflow-x: auto; 
     text-align: center;
     background-color: #3aa7b1;
-    padding-top: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.title, .button {
+    font-size: 30px;
+    margin-bottom: 20px;
+    animation: tableEffect 1s ease-in-out;
 }
 
 .productTable {
@@ -36,10 +56,7 @@
     background-color: white;
 }
 
-.productTable, .title {
-    animation-name: tableEffect;
-    animation-duration: 2s;
-}
+
 
 .productTable th, .productTable td {
   padding: 12px 15px;
