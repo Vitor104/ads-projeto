@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import Styles from "./products.module.css";
 import { productsList } from "./productsList";
 import Button from 'react-bootstrap/Button';
+import { useLocation } from "react-router-dom";
 
 
 function Products() {
@@ -12,9 +13,13 @@ function Products() {
     setProducts(updatedProducts);
   } 
 
+  let location = useLocation();
+  let nome = location.state?.user;
+
 
   return (
     <div className={Styles.container}>
+        <p className={Styles.title}>Olá, {nome}!</p>
         <h1 className={Styles.title}>Produtos Disponíveis</h1>
         <table className={`table table-striped table-bordered table-dark rounded shadow-sm ${Styles.productTable}`}>
             <thead>

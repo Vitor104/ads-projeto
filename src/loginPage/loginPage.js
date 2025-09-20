@@ -1,7 +1,8 @@
-    import React, {useState} from "react";
+import React, {useState} from "react";
 import Styles from "./loginPage.module.css";
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from "react-router-dom";
+import Products from "../products/products";
 
 function LoginPage() {
 
@@ -16,8 +17,10 @@ function LoginPage() {
         const users = usersData ? JSON.parse(usersData) : [];
         const foundUser = users.find(user => user.email === email);
 
+
         if (foundUser && foundUser.password === password) {
-            navigate('/Products');
+            navigate('/Products', { state: { user: foundUser.name } });
+           
         } else {
             alert('Usuário ou senha incorretos!');
         }
@@ -25,6 +28,7 @@ function LoginPage() {
         
     }
 
+   
   return (
     <div className={Styles.container}>
 
@@ -95,6 +99,7 @@ function LoginPage() {
                 </Link>
                 
             </form>
+            
         </div>   
 
 
