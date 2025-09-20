@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Styles from "./loginPage.module.css";
 import Button from 'react-bootstrap/Button';
 import { Link, useNavigate } from "react-router-dom";
-import Products from "../products/products";
+
 
 function LoginPage() {
 
