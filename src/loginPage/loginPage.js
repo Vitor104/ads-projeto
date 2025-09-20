@@ -93,9 +93,9 @@ function LoginPage() {
                 </div>
 
                 {/* ENVIAR DADOS PARA VALIDAÇÃO */}
-                <Button className={Styles.button} type="submit" >Sign In</Button>
+                <Button className={Styles.button} type="submit" >Entrar</Button>
                 <Link className={Styles.linkBtt} to={'./Sign Up'}>
-                    <Button className={Styles.bttSignUp} type="submit">Sign Up</Button>
+                    <Button className={Styles.bttSignUp} type="submit">Registre-se</Button>
                 </Link>
                 
             </form>
@@ -109,7 +109,7 @@ function LoginPage() {
                 <h2 className={Styles.text}>Olá, visitante!</h2>
                 <p className={Styles.description}>Ainda não possui uma conta?</p>
                 <Link to={'./Sign Up'}>
-                    <Button className={Styles.bttSignUp} type="submit" variant="light">Sign Up</Button>
+                    <Button className={Styles.bttSignUp} type="submit" variant="light">Registre-se</Button>
                 </Link>
         </div>
     </div>
